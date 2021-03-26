@@ -1,14 +1,13 @@
 class Api::V1::AuthController < ApplicationController
+  skip_before_action :require_login, only: [:login]
   def login
     user = User.find_by(email: login_params[:email])
-    render json: {user: user}
-    # if user && user.authenticate(login_params[:password])
-    #   payload = {user: user.id}
-    #   token = encode_token(payload)
-    #   render json: {user: user, token: token}
-    # else
-    #   render json: {errors: user.errors.full_messages}
-    # end
+    if user && user.authenticate(login_params[:password])
+         token = JWT.encode({user_id: user.id}, secret, 'HS256')
+        render json: {token: token}
+    else
+        render json: {errors: user.errors.full_messages}
+    end
   end
 
   def persist
