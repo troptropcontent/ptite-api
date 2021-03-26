@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resource :users, only: [:create]
       post "/login", to: "auth#login"
-      get "/auto_login", to: "auth#auto_login"
+      get "/persist", to: "auth#persist"
       get "/user_is_authed", to: "auth#user_is_authed"
     end
   end
