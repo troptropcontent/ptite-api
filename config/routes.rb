@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resource :users, only: [:create]
-      resources :events, only: [:index]
+      resources :events, only: [:index, :create, :update, :destroy]
+      resources :groups, only: [:index, :create, :update, :destroy]
       post "/login", to: "auth#login"
       get "/persist", to: "auth#persist"
       get "/user_is_authed", to: "auth#user_is_authed"
