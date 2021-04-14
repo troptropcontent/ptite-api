@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include AlgoliaSearch
+
   has_secure_password
   has_many :events
   has_many :group_members
@@ -8,9 +10,16 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
 
 
+  algoliasearch do
+    attributes :first_name, :last_name, :email
+  end
+
+  
   # render all users but the current one
   def other_users
     User.where.not("id = ?", self.id)
   end
+
+  
   
 end
