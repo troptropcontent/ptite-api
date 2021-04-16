@@ -2,16 +2,25 @@
 
 # Ptite?
 
-Simple application pour l'organisation de repas entre amis ou pour se rassembler tout simplement. 
+Une application pour l'organisation de repas entre amis ou pour se rassembler, tout simplement. 
 
-L'idée est simple, en quelques clics je peux inviter des groupes d'amis en renseignant : 
+L'idée ? En quelques clics, je peux inviter des d'amis :
 
-1. **Quoi ?** Ptit boeuf bourguignon ? Ptite biere ?
-2. **Quand ?** Demain
-3. **Où ?** Chez moi
-4. **Qui ?** Les Bronzés
+1. En créant différents groupes d'amis dans l'application;
 
-Et toutes personnes du groupe reçoivent une invitation où il leur suffit de répondre Oui || Peut-etre || Non
+2. En créant de nouveaux événements très rapidement:
+
+    * **Quoi ?** Ptit boeuf bourguignon ? Ptit brunch ?
+    * **Quand ?** Demain
+    * **Où ?** Chez moi
+    * **Qui ?** Anciens du lycée
+
+Toutes les personnes du groupe concerné ("Anciens du lycée") reçoivent une invitation sous forme de notification ! 
+
+Il leur suffit alors de répondre Oui || Peut-etre || Non, d'un seul click.
+
+
+S'ils acceptent, l'évènement s'ajoute à leur agenda.
 
 # Fonctionnement de l'application
 
