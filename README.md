@@ -1,24 +1,25 @@
-# README
+![](https://github.com/troptropcontent/ptite-front-react/blob/master/src/logo.svg)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Ptite?
 
-Things you may want to cover:
+Simple application pour l'organisation de repas entre amis ou pour se rassembler tout simplement. 
 
-* Ruby version
+L'idée est simple, en quelques clics je peux inviter des groupes d'amis en renseignant : 
 
-* System dependencies
+1. **Quoi ?** Ptit boeuf bourguignon ? Ptite biere ?
+2. **Quand ?** Demain
+3. **Où ?** Chez moi
+4. **Qui ?** Les Bronzés
 
-* Configuration
+Et toutes personnes du groupe reçoivent une invitation où il leur suffit de répondre Oui || Peut-etre || Non
 
-* Database creation
+# Fonctionnement de l'application
 
-* Database initialization
+L'application est séparée en deux : 
 
-* How to run the test suite
+* Une application SPA en React ([repo consultable ici](https://github.com/troptropcontent/ptite-front-react)) pour le **front-end**
+* Une application API en Ruby On Rails (ce même repo) pour le **back-end** qui génère tout le JSON dont le **front-end** a besoin.
 
-* Services (job queues, cache servers, search engines, etc.)
+L'Authentification des utilisateurs se fait par transmission de JSON Web Token entre les deux Application. 
+Pour ce faire j'utilise les Gems **'bcrypt'** et **'jwt'**
 
-* Deployment instructions
-
-* ...
